@@ -111,7 +111,7 @@
 \begin{itemize}
 	\item Jeu de type Puzzle
 	\item Développé par \emph{Compile}
-	\item Sortie en 1991
+	\item Sorti en 1991
 \end{itemize}
 }
 \end{frame}
@@ -177,7 +177,7 @@
 
 \subsubsection{Action du joueur}
 
-\begin{frame}{Pression sur L ou R (a quelques détails près)}
+\begin{frame}{Pression sur L ou R}
 \lstinputlisting[language=pdl]{pdl/puyopuyo/leftMotion.txt}
 \end{frame}
 
@@ -190,10 +190,10 @@
 \end{block}
 \end{frame}
 
-\begin{frame}{Appuie sur les flèches directionnelles}
+\begin{frame}{Appui sur une flèche directionnelle}
 Pour la flèche gauche:
 \lstinputlisting[language=pdl]{pdl/puyopuyo/leftOrient.txt}
-On feras de même pour la fleche haute, droite et basse. Nous attribuerons respectivement à p1.bf1.orient 1, 2 ou 3.
+On fera de même pour la flèche haut, droite et bas. Nous attribuerons respectivement à p1.bf1.orient 1, 2 ou 3, et modifieront les conditions de manière à ce qu'elles correspondent à chaque direction.
 \end{frame}
 
 \subsubsection{Règles du jeu}
@@ -237,7 +237,7 @@ On feras de même pour la fleche haute, droite et basse. Nous attribuerons respe
 \begin{itemize}
 	\item Jeu de course
 	\item Développé par Leland Corporation
-	\item Sortit en 1989 sur borne d'arcade
+	\item Sorti en 1989 sur borne d'arcade
 \end{itemize}
 }
 \end{frame}
@@ -314,19 +314,15 @@ On feras de même pour la fleche haute, droite et basse. Nous attribuerons respe
 \begin{frame}{Actions utilisateurs}
 \lstinputlisting[language=pdl]{presentationfiles/ActionUtilisateur.txt}
 
-On fait de même avec les touches q, s, d et spacebar où l'on change respectivement les valeurs de \emph{gauche}, \emph{bas},\emph{droite} et \emph{nitro}
+On fait de même avec les touches q, s, d et spacebar où l'on change respectivement les valeurs de \emph{gauche}, \emph{bas},\emph{droite} et \emph{nitro}.
 
 \lstinputlisting[language=pdl]{presentationfiles/TournerUtilisateur.txt}
 \end{frame}
 
 \subsubsection{Règles du jeu}
 
-\begin{frame}{Condition de défaite}
-
-\end{frame}
-
 \begin{frame}{Condition de victoire}
-
+Le joueur gagne lorsqu'il est le premier à effectuer les 3 tours de circuit dans le sens imposé. Pour cela, il peut utiliser de l'argent avant la course pour s'acheter des améliorations, et peut aussi utiliser les boosts disponibles sur le terrain durant la course. 
 \end{frame}
 
 \subsection{Algorithmes}
@@ -336,7 +332,7 @@ On fait de même avec les touches q, s, d et spacebar où l'on change respective
 fonction Speed calculateSpeed ( -> Car car , -> entier acceleration , -> entier avgAcceleration , -> booleen isAccelerate , -> booleen isBreack , -> booleen isNitro, -> reel dt )
 \end{lstlisting}
 
-On calcule la nouvelle vitesse de la voiture en fonction de son accélération (qui dépendras des obstacles) ainsi que des actions utilisateurs.
+On calcule la nouvelle vitesse de la voiture en fonction de son accélération (qui dépendra des obstacles) ainsi que des actions de l'utilisateur.
 \end{frame}
 
 \begin{frame}{isCollision}
