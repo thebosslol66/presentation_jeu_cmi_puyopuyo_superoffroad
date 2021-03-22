@@ -1,0 +1,19 @@
+reel timer
+Ground level
+level.walls <- [wall1, wall2, wall3, ...]
+level.spawnPosNitro <- [nitro1, nitro2, nitro3, ...]
+level.muds <- [mud1, mud2, mud3, ...]
+level.flags <- [flag1, flag2, flag3, ...]
+Car playerCar
+playerCar.pos.x <- x
+PlayerCar.pos.y <- y
+PlayerCar.speed <- 0
+playerCar.direction <- 0
+playerCar.laps <- 0
+PlayerCar.flag <-0
+PlayerCar.nbNitro <- 3 
+booleen haut <- false
+booleen bas <- false
+booleen gauche <- false
+booleen droite <- false
+booleen nitro <- false

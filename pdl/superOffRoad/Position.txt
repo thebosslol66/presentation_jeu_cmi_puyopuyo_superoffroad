@@ -1,0 +1,4 @@
+Struct Position:
+	entier x
+	entier y
+finStruct

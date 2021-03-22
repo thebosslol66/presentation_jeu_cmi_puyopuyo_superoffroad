@@ -1,0 +1,3 @@
+Booleen fonction blockAtStart (->entier[][] blocks)
+	retourner (blockTest(blocks, 0, WIDTHMAT/2-1) OU blockTest(blocks, 0, WIDTHMAT/2))
+finFonction

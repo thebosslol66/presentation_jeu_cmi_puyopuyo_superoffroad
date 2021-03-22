@@ -1,0 +1,10 @@
+action blockDown (->Player p1->) 
+	dansLeCasDe (p1.bf1.orient)
+		cas 0 : 
+	blocks[p1.bf1.posMat.x][p1.bf1.posMat.y - 1].color <- p1.bf1.color2
+	blocks[p1.bf1.posMat.x][p1.bf1.posMat.y - 1].exist <- true
+	
+// On changeras respectivement pour 1, 2 et 3  la postition dans la matrice  [p1.bf1.posMat.x][p1.bf1.posMat.y + 1], [p1.bf1.posMat.x + 1][p1.bf1.posMat.y] et [p1.bf1.posMat.x - 1][p1.bf1.posMat.y]
+	
+	finCasDe
+finAction

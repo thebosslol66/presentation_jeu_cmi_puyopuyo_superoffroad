@@ -1,0 +1,5 @@
+action moveCar( -> Car car ->, -> reel dt)
+	car.position.x <- car.position.x + car.speed.x*dt
+	car.position.y <- car.position.y + car.speed.y*dt
+finAction
+

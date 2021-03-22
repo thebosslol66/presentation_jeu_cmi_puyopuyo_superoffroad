@@ -1,0 +1,4 @@
+Struct Flag
+	Hitbox2P hitbox
+	entier nb
+finStruct

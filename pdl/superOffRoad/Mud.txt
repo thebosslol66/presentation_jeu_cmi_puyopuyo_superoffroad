@@ -1,0 +1,4 @@
+Struct Mud
+	Position pos
+	Hitbox4P hitbox
+finStruct

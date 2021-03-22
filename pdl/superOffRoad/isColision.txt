@@ -1,0 +1,15 @@
+fonction booleen isCollision(-> Position[] verticle1, -> Position [] verticle)
+	Position[] listAxis
+	listAxis <- getAxisList(verticle1)
+	booleen collision
+	entier count
+	Pour i de 0 a longueur(listAxis) pas de 1 faire
+		Si (isCollisionAxis(listAxis[i], verticle1, verticle2)) ALORS
+			count++
+		finSi
+	finPour
+	si (count == longueur(listAxis)) alors
+		collision <- true
+	finSi
+	retourner collision
+finFonction

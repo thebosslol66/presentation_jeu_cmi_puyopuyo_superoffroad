@@ -1,0 +1,5 @@
+Pour i allant de 0 a longueur(level.muds) - 1 FAIRE
+	Si (isCollision(hitbox4ToList(playerCar.hitbox), hitbox2ToList(level.muds[i].hitbox))) ALORS
+		malusBonusSpeed <- malusBonusSpeed - 0.20
+	finSi
+finPour

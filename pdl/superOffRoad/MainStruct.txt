@@ -1,0 +1,50 @@
+Struct Position:
+	entier x
+	entier y
+finStruct
+
+Struct Hitbox4P
+ 	Position corner1
+	Position corner2
+	Position corner3
+	Position corner4
+finStruct
+
+Struct Hitbox2P
+	Position corner1
+	Position corner2
+finStruct
+
+Struct Flag
+	Hitbox2P hitBox
+fin Stuct
+
+
+Struct Wall
+	Hitbox2P hitboxWall
+	entier directionStop
+finStruct 
+
+Struct Speed
+	reel x
+	reel y
+finStruct
+
+Struct Car 
+	Position pos
+	Speed speed
+	entier direction
+	entier laps
+	Hitbox4P hitboxCar
+finStruct
+
+Struct Bonus
+	Position pos 
+	Hitbox4P hitbox
+finStruct
+
+Struct Mud
+	Position pos
+	Hitbox hitbox
+finStruct
+

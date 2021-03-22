@@ -1,0 +1,7 @@
+fonction Position[] getProject(-> Position axis, -> Position[] verticle)
+	reel[] listProject
+	Pour i allant de 0 a longueur(verticle)-1 pas de 1 faire
+		listProject[i] <- vectorDotProduct(axis, verticle[i])
+	finPour
+	retourner listProject
+finFonction

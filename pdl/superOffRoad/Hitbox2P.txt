@@ -1,0 +1,4 @@
+Struct Hitbox2P
+	Position corner1
+	Position corner2
+finStruct

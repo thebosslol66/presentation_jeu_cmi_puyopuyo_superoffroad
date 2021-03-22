@@ -1,0 +1,15 @@
+fonction Hitbox4P getHitboxCar (->Car car,->entier long,->entier large)
+	Hitbox4P hitbox
+	reel angleRad <- (pi - car.direction * (pi/8) + 2pi) % (2pi)
+	reel diag <- (Math.sqrt(Math.pow(large,2)+Math.pow(long,2)))
+	reel angleCar <- (arsin(large/diag))
+	hitbox.corner1.x <- car.pos.x - cos(angleRad-angleCar)*diag
+	hitbox.corner1.y <- car.pos.y + sin(angleRad-angleCar)*diag
+	hitbox.corner2.x <- car.pos.x - cos(angleRad+angleCar)*diag
+	hitbox.corner2.y <- car.pos.y + sin(angleRad+angleCar)*diag
+	hitbox.corner3.x <- car.pos.x + cos(angleRad-angleCar)*diag
+	hitbox.corner3.y <- car.pos.y + sin(angleRad+angleCar)*diag
+	hitbox.corner4.x <- car.pos.x + cos(angleRad-angleCar)*diag
+	hitbox.corner4.y <- car.pos.y + sin(angleRad-angleCar)*diag
+	retourner hitbox
+finFonction

@@ -1,0 +1,6 @@
+si (gauche) alors
+	playerCar.direction <- (playerCar.direction -1)%16
+finSi
+si (droite) alors
+	playerCar.direction <- (playerCar.direction +1)%16
+finSi

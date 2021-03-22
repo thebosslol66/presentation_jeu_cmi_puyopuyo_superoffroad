@@ -1,0 +1,8 @@
+Struct BlockFall 
+	entier orient
+	caractere color1 
+	caractere color2
+	Position pos
+	Position posMat
+	entier speed 
+finStruct

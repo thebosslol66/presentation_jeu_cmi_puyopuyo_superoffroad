@@ -1,0 +1,5 @@
+Pour i allant de 0 a longueur(level.flags) - 1 FAIRE
+	Si (isCollision(hitbox4ToList(playerCar.hitbox), hitbox2ToList(level.flags[i].hitbox))) ALORS
+		countTour(playerCar, level.flags[i], longueur(level.flags) - 1)
+	finSi
+finPour

@@ -1,0 +1,6 @@
+Struct Hitbox4P
+ 	Position corner1
+	Position corner2
+	Position corner3
+	Position corner4
+finStruct

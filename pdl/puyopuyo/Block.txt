@@ -1,0 +1,5 @@
+Struct Block
+	booleen exist
+ 	caractere color
+	entier groupID
+finStruct

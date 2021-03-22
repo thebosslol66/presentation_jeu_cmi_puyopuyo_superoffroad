@@ -1,0 +1,3 @@
+playerCar.speed <- playerNewSpeed
+moveCar(playerCar, dt)
+malusBonusSpeed <- 1

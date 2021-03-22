@@ -1,0 +1,15 @@
+action doGravityOnAll (->entier[][] blocks->)
+	int i, j, k
+	pour i allant de 0 a (WIDTHMAT -1) pas de 1 faire 
+		pour j allant de 0 a (HEIGHTMAT -2) pas de 1 faire 
+			si (blockTest(blocks, i+1, j)) alors
+				pour k allant de j a 0 pas de -1 faire 
+					blocks[i+1][j].exist <- blocks[i][j].exist
+					blocks[i+1][j].color <- blocks[i][j].color
+					blocks[i][j].exist <- faux
+					blocks[i][j].color <- v
+				finPour
+			finSi
+		finPour
+	finPour
+finAction

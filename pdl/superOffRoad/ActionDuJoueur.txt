@@ -1,0 +1,42 @@
+
+ si (key 'z' is pressed) alors
+ 	haut <- true
+ finSi
+ si (key 'q' is pressed) alors
+ 	gauche <- true
+ finSi
+ si (key 's' is pressed) alors
+ 	bas <- true
+ finSi
+ si (key 'd' is pressed) alors
+ 	droite <- true
+ finSi
+ si (key 'spaceBar' is pressed) alors
+ 	nitro <- true
+ finSi
+
+
+ si (key 'z' is released) alors
+ 	haut <- false
+ finSi
+ si (key 'q' is released) alors
+ 	gauche <- false
+ finSi
+ si (key 's' is released) alors
+ 	bas <- false
+ finSi
+ si (key 'd' is released) alors
+ 	droite <- false
+ finSi
+ si (key 'spaceBar' is released) alors
+ 	nitro <- false
+ finSi
+
+
+
+si (gauche) alors
+	playerCar.direction <- (playerCar.direction -1)%16
+finSi
+si (droite) alors
+	playerCar.direction <- (playerCar.direction +1)%16
+finSi

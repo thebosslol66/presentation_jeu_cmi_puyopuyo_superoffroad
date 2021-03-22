@@ -1,0 +1,22 @@
+fonction Position[] hitbox4ToList(-> Hitbox4P hitbox)
+	Position[] verticle
+	verticle[0].x <- hitbox.corner1.x
+	verticle[0].y <- hitbox.corner1.y
+	verticle[1].x <- hitbox.corner2.x
+	verticle[1].y <- hitbox.corner2.y
+	verticle[2].x <- hitbox.corner3.x
+	verticle[2].y <- hitbox.corner3.y
+	verticle[3].x <- hitbox.corner4.x
+	verticle[3].y <- hitbox.corner4.y
+	retourner verticle
+finFonction
+
+fonction Position[] hitbox2ToList(-> Hitbox2P hitbox)
+	Position[] verticle
+	verticle[0].x <- hitbox.corner1.x
+	verticle[0].y <- hitbox.corner1.y
+	verticle[1].x <- hitbox.corner2.x
+	verticle[1].y <- hitbox.corner2.y
+	retourner verticle
+finFonction
+

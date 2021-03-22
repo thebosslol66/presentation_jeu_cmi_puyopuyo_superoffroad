@@ -1,0 +1,4 @@
+Struct Game
+	Player p1
+	Player p2
+finStruct

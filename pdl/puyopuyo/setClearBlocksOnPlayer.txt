@@ -1,0 +1,11 @@
+action setClearBlocksOnPlayer (->Player p1->,-> entier reps)
+	entier i, nb
+	pour i de 0 a (reps) Pas de 1 faire 
+		nb <- random0toNb(WIDTHMAT)
+		si (p1.blocks[0][nb].exist == faux) alors
+			p1.blocks[i][0].color <- w 
+			p1.blocks[i][0].exist <- vrai
+			doGravityOnAll(p1.blocks)
+		finSi
+	finPour
+finAction

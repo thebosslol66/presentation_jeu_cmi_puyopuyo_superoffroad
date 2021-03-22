@@ -1,0 +1,26 @@
+entier fonction attribuerGroupe(->Blocks[][] Matrice->, -> Position posBlock,-> entier groupID) 
+	entier x, y
+	entier longueurChaine <- 0
+	Pour i allant de 0 a 3 pas de 1 faire 
+		si (i%2 == 0) alors
+			x <- posBlock.x +i -1
+			y <- posBlock.y
+		sinon 
+			x <- posBlock.x
+			y <- posBlock.y +i -2
+		finSi
+		si (x >= 0 ET x < longueur(2, Matrice)  ET y >= 0 ET y <longueur(1, Matrice)) alors
+			si (Matrice[y][x].exist) alors
+				si (Matrice[posBlock.y][posBlock.x].couleur == Matrice[y][x].couleur && Matrice[y][x].groupID == 0) alors
+					Matrice[y][x].groupID <- groupID
+					Position pos <- new Position()
+					pos.x <- x
+					pos.y <- y
+					longueurChaine += (1 + AttribuerGroupe(Matrice, pos, groupID))
+				finSi
+			finSi
+		finSi
+	finPour   	 
+	retourner longueurChaine;
+finFonction
+

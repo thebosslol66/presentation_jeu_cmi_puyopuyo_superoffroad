@@ -1,0 +1,14 @@
+Fonction Position[] getAxisList(-> Position[] verticle)
+	Position [] listAxis
+	reel magnitude
+	Pour i allant de 0 a longueur(verticle)-1 pas de 1 FAIRE
+		listAxis[i].x <- -(verticle[(i+1)%4].y - verticle[i].y)
+		listAxis[i].y <- (verticle[(i+1)%4].x - verticle[i].x)
+		magnitude <- sqrt(listAxis[i].x * listAxis[i].x+listAxis[i].y*listAxi)
+		Si (magnitude != 0) ALORS
+			listAxis[i].x <- listAxis[i].x/magnitude
+			listAxis[i].y <- listAxis[i].y/magnitude
+		finSi
+	finPour
+	retourner listAxis
+finFonction

@@ -1,0 +1,6 @@
+Pour i allant de 0 a longueur(nitroList) - 1 FAIRE
+	Si (isCollision(hitbox4ToList(playerCar.hitbox), hitbox2ToList(nitroList[i].hitbox))) ALORS
+		playerCar.nbNitro <- playerCar.nbNitro + 1
+		nitroList[i] <- vide
+	finSi
+finPour

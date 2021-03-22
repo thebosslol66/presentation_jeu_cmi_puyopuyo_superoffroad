@@ -1,0 +1,11 @@
+fonction countNbBlocksEqualID(->block[][] mat ->, -> ID)
+	entier nb <- 0
+	pour i de 0 a WIDTHMAT pas de 1
+		pour j de 0 a HEIGHTMAT pas de 1 faire
+			si (mat[i][j].groupID == ID) alors
+				nb <- nb +1
+			finSi
+		finPour
+	finPour
+	retourner nb
+finFonction

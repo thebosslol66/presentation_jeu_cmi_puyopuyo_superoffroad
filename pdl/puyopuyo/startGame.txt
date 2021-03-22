@@ -1,0 +1,21 @@
+Game fonction startGame ()
+	Game game
+	entier i, j
+	pour i de 0 a (WIDTHMAT -1) Pas de 1 faire 
+		pour j de 0 a (HEIGHTMAT -1) Pas de 1 faire 
+			game.p1.blocks[i][j].exist <- faux
+			game.p1.blocks[i][j].color <- v
+			game.p2.blocks[i][j].exist <- faux
+			game.p2.blocks[i][j].color <- v
+		finPour
+	finPour
+	randBlockFall(game.p1.bf1)
+	randBlockFall(game.p1.bf2)
+	randBlockFall(game.p2.bf1)
+	randBlockFall(game.p2.bf2)
+	initBlockFall(game.p1.bf1, game.p1.bf1)
+	initBlockFall(game.p2.bf1, game.p2.bf1)
+	game.p1.score <- 0
+	game.p2.score <- 0
+	retourner game
+finFonction

@@ -1,0 +1,11 @@
+caractere fonction switchColor (->entier nb)
+	caractere color
+	dansLeCasDe(nb)
+		case 0 : char <- y
+		case 1 : char <- r
+		case 2 : char <- b
+		case 3 : char <- g
+		case 4 : char <- p
+		default : char <- v
+	retourner char 
+finFonction

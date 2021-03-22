@@ -1,0 +1,3 @@
+entier fonction random0toNb (->int nb)
+	retourner ((entier)(math.random() * (nb +1)))
+finFonction

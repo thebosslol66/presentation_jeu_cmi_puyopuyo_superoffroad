@@ -1,0 +1,3 @@
+Si (blockTest(p1.blocks, p1.bf1.posMat.x, p1.bf1.posMat.y -1)  ET ( p1.bf1.posMat.x > 0))
+	p1.bf1.orient <- 0
+finSi 

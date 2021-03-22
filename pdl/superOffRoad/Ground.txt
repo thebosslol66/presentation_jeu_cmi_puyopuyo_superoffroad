@@ -1,0 +1,6 @@
+struct Ground
+	Wall [] walls
+	Position [] spawnPosNitro
+	Mud [] muds
+	Flag [] flags
+finStruct

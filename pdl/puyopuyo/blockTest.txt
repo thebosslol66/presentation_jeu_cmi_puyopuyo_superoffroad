@@ -1,0 +1,3 @@
+booleen fonction blockTest (->entier[][] blocks, ->entier i, ->entier j) 
+	retourner(blocks[i][j].exist == faux)
+finFonction

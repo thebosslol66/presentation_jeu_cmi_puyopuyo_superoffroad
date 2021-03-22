@@ -1,0 +1,6 @@
+action recalculateSpeedDirection(-> Car car ->)
+	angleRad <- (pi - car.direction * (pi / 8) + 2*pi) % 2*pi
+	normeVitesse <- calculateNorme(car.speed.x, car.speed.y)
+	car.speed.x <- cos(angleRad)*normeVitesse
+	car.speed.y <- sin(angleRad)*normeVitesse
+finAction

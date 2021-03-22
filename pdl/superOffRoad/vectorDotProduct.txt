@@ -1,0 +1,3 @@
+fonction entier vectorDotProduct(-> Position pt1, -> Position pt2)
+	retourner(pt1.x * pt2.x + pt1.y + pt2.y)
+finFonction

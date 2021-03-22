@@ -1,0 +1,40 @@
+fonction Speed calculateSpeed(-> Car car, -> entier acceleration, -> entier avgAcceleration, -> booleen isAccelerate, -> booleen isBreack, -> booleen isNitro -> reel dt) 
+	reel angleRad <- (pi - car.direction * (pi / 8) +2*pi) % 2*pi
+	reel normeSpeed <- calculateNorme(car.speed.x, car.speed.y)
+	Speed speed
+	si (!isAccelerate) alors
+		acceleration <- 0
+	finSi
+	si (isNitro) alors
+		speed.x <- cos(angleRad)*avgAcceleration*6
+		speed.y <- sin(angleRad)*avgAcceleration*6
+		return speed
+	finSi
+	si (isBreack) alors
+		si (normeSpeed < 1/5 * (avgAcceleration*5)) alors
+			normeSpeed <- 0
+		finSi
+		speed.x <- cos(angleRad)*normeSpeed * 1/3 * dt
+		speed.y <- sin(angleRad)*normeSpeed * 1/3 * dt
+		return speed
+	finSi	 
+	si (acceleration != 0) alors
+		accelerationX <- cos(angleRad)*(acceleration*2 - (1/5*normeSpeed*2))*dt
+		accelerationY <- sin(angleRad)*(acceleration*2 - (1/5*normeSpeed*2))*dt
+		speed.x <- car.speed.x + accelerationX*dt
+		speed.y <- car.speed.y + accelerationY*dt
+	sinon 
+		maxSpeed <- avgAcceleration*5
+		si ((normeSpeed / maxSpeed) > 0.05) alors
+			deceleration <- maxSpeed * (normeSpeed / maxSpeed) * 0.4
+			accelerationX <- -cos(angleRad)*(deceleration)*dt
+			accelerationY <- -sin(angleRad)*(deceleration)*dt
+			speed.x <- car.speed.x + accelerationX*dt
+			speed.y <- car.speed.y + accelerationY*dt
+		sinon
+			speed.x <- 0
+			speed.y <- 0
+		finSi
+	finSi
+	retourner speed
+finFonction

@@ -1,0 +1,4 @@
+Struct Bonus
+	Position pos 
+	Hitbox4P hitbox
+finStruct

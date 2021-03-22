@@ -1,0 +1,9 @@
+Struct Car 
+	Position pos
+	Speed speed
+	entier direction
+	entier laps
+	Hitbox4P hitbox
+	entier flag
+	entier nbNitro
+finStruct

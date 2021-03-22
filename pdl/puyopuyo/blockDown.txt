@@ -1,0 +1,16 @@
+action blockDown (->Player p1->) 
+	dansLeCasDe (p1.bf1.orient)
+		cas l : 
+	blocks[p1.bf1.posMat.x][p1.bf1.posMat.y - 1].color <- p1.bf1.color2
+	blocks[p1.bf1.posMat.x][p1.bf1.posMat.y - 1].exist <- true
+		cas r : 
+	blocks[p1.bf1.posMat.x][p1.bf1.posMat.y + 1].color <- p1.bf1.color2
+	blocks[p1.bf1.posMat.x][p1.bf1.posMat.y + 1].exist <- true
+		cas u : 
+	blocks[p1.bf1.posMat.x + 1][p1.bf1.posMat.y].color <- p1.bf1.color2
+	blocks[p1.bf1.posMat.x + 1][p1.bf1.posMat.y].exist <- true
+		cas d : 
+	blocks[p1.bf1.posMat.x][p1.bf1.posMat.y + 1].color <- p1.bf1.color2
+	blocks[p1.bf1.posMat.x][p1.bf1.posMat.y + 1].exist <- true
+	finCasDe
+finAction

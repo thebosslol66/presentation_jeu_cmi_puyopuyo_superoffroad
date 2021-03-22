@@ -1,0 +1,11 @@
+fonction entier redirectIfPunchWall(-> Car car , -> Wall wall)
+	mustRedir <- (car.direction - wall.directionStop +16)%16
+	Si (mustRedir == 0) ALORS
+		retourner wall.directionStop
+	Sinon Si (mustRedir < 4) ALORS
+		retourner (wall.direction - 4) % 16
+	Sinon Si (mustRedir > 12) ALORS
+		retourner (wall.direction + 4) % 16
+	finSi
+finFonction
+

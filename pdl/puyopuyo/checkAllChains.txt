@@ -1,0 +1,16 @@
+action checkAllChains(->Blocks[][] mat->) 
+entier baseGroupId <- 1, i, j
+	pour i de 0 a WIDTHMAT, pas de 1
+		pour j de 0 a HEIGHTMAT - 1, pas de 1, faire
+			si (mat[i][j].exist ET mat[i][j].groupID == 0) alors
+				Position pos = new Position()
+				pos.x <- j
+				pos.y <- i
+				entier longueur <- AttribuerGroupe(mat, pos, baseGroupId);
+				si (longueur > 1) alors
+					baseGroupId += 1
+				finSi
+			finSi
+		finPour
+	finPour
+finAction

@@ -1,0 +1,13 @@
+fonction booleen isCollisionAxis(-> Position axis, -> Position[] verticle1, -> Position[] verticle2)
+	reel listProj1
+	reel listProj2
+	booleen isCollision
+	listProj1 <- getProject(axis, verticle1)
+	listProj2 <- getProject(axis, verticle2)
+	sort(listProj1)
+	sort(listProj2)
+	Si (listProj1[longueur(listProj1)-1]>=listProj2[0] ET listProj1[0]<=listProj2[longueur(listProj2)-1])
+		isCollision <- true
+	finSi
+	retourner isCollision
+finFonction

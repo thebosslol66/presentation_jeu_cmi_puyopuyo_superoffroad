@@ -1,0 +1,6 @@
+si (key 'z' is pressed) alors
+	haut <- true
+finSi
+si (key 'z' is released) alors
+	haut <- false
+finSi

@@ -1,0 +1,7 @@
+Pour i allant de 0 a longueur(level.walls) - 1 faire
+	Si (isCollision(hitbox4ToList(playerCar.hitbox), hitbox2ToList(level.walls[i].hitbox))) alors
+		redirectIfPunchWall(playerCar, level.walls[i])
+		recalculateSpeedDirection(playerCar)
+		malusBonusSpeed <- malusBonusSpeed - 0.40
+	finSi
+finPour

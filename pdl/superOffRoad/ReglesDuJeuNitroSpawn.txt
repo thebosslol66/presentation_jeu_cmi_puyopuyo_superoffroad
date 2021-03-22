@@ -1,0 +1,14 @@
+timer += dt
+booleen vide <- true
+entier i <- 0
+faire
+	si nitroList[i].pos.x == 0 ET nitroList[i].pos.y == 0 FAIRE
+		vide <- true
+	sinon
+		vide <- false 
+	finSi
+	i++
+tanQue (i<longueur(nitroList) OU vide == false)
+si (timer == NITRO_SPAWN_TIME ET vide == true) FAIRE
+	nitroList[i] <- generateNitro(ground.spawnPosNitro, nitroList) 
+finSI

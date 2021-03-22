@@ -1,0 +1,2 @@
+Speed playerNewSpeed
+playerNewSpeed <- calculateSpeed(playerCar, ACCELERATION*malusBonusSpeed, ACCELERATION, haut, bas, nitro, dt)

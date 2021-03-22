@@ -1,0 +1,16 @@
+fonction Bonus generateNitro(-> Position[] spawnNitro, -> Bonus[] nitroList)
+	Bonus nitro
+	booleen present <- faux
+	faire
+		entier hasard <- random(0,longueur(spawnNitro))
+		nitro.pos.x <- spawnNitro[hasard].pos.x
+		nitro.pos.y <- spawnNitro[hasard].pos.y
+		pour i allant de 0 a longueur(nitroList) faire
+			si (nitroList[i].pos.x == nitro.pos.x ET nitroList[i].pos.y == nitro.pos.y) alors
+				present <- vrai
+			finSi
+		finPour
+	tantQue (present)
+	retourner nitro
+finAction
+

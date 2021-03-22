@@ -1,0 +1,15 @@
+entier fonction destroyBlock(->block[][] mat ->)
+	entier i, j, k, nbrChain
+	pour k de WIDTHMAT*HEIGHTMAT a 1 pas de -1 faire
+		si (countNbBlocksEqualID(mat, k) > 3) alors
+			resetBlocksForID(mat, k)
+			nbrChain <- nbrChain +1
+		finSi
+	finPour
+	pour i de 0 a (WIDTHMAT -1) pas de 1
+		pour j de 0 a (HEIGHTMAT -1) pas de 1 faire
+			mat[i][j].blockID <- 0
+		finPour
+	finPour
+	retourner nbrChain
+finFonction

@@ -1,0 +1,4 @@
+Struct Wall
+	Hitbox2P hitbox
+	entier directionStop
+finStruct 
