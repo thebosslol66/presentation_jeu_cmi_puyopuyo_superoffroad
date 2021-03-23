@@ -1,5 +1,5 @@
 action resetBlocksForID(->block[][] block ->, ->k)
-	pour i de 0 a (WIDTHMAT -1) pas de 1
+	pour i de 0 a (WIDTHMAT -1) pas de 1 faire
 		pour j de 0 a (HEIGHTMAT -1) pas de 1 faire
 			si (block[i][j].blockID == k ET block[i][j].color != w) alors
 				block[i][j].exist <- faux
@@ -7,8 +7,9 @@ action resetBlocksForID(->block[][] block ->, ->k)
 				si (block[i][j+1].color == w) alors 
 					block[i][j+1].exist <- faux
 					block[i][j+1].color <- v
-//On regarde aussi les 3 autres blocks a cote et on verifie si il faut les detruires
-			finsi
-		finpour 
-	finpour
+//On regarde aussi les 3 autres blocks a cote et on verifie s'il faut les detruire
+				finSi
+			finSi
+		finPour 
+	finPour
 finAction
