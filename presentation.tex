@@ -193,9 +193,8 @@ On fera de même pour la flèche haut, droite et bas. Nous attribuerons respecti
 \end{frame}
 
 \subsubsection{Règles du jeu}
-
-\begin{frame}[allowframebreaks]{Boucle Principale}
-\lstinputlisting[language=pdl]{pdl/puyopuyo/boucleJeu.txt}
+\begin{frame}{Règles du jeu}
+\midcolumn{Le jeu se termine une fois que les nouveaux Puyo ne peuvent plus accéder à la grille d’un joueur, c’est-à-dire quand les deux blocs où ils apparaissent sont déjà occupés par d’autres Puyo qui ne sont pas détruits par combinaisons et lorsque la colonne est remplie d’autres Puyo. Le joueur a alors perdu, et son adversaire gagne}{\includegraphics[width=\textwidth]{presentationfiles/fin_jeu_puyo}}
 \end{frame}
 
 \subsection{Algorithmes}
@@ -227,6 +226,10 @@ On fera de même pour la flèche haut, droite et bas. Nous attribuerons respecti
 
 \begin{frame}{setClearBlocksOnPlayer}
 \lstinputlisting[language=pdl]{pdl/puyopuyo/setClearBlocksOnPlayer.txt}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Boucle Principale}
+\lstinputlisting[language=pdl]{pdl/puyopuyo/boucleJeu.txt}
 \end{frame}
 
 \section{Super off road}
