@@ -1,10 +1,9 @@
 fonction entier countTour(->Car car,->Flag flag,->int nbFlag)
-	si (flag.nb == 0 ET Car.flag == nbFlag -1) alors
-		Car.laps++
-		Car.flag <- 0
-	sinon si (flag.nb - Car.flag == 1) alors
-		Car.flag++
+	si (flag.nb == 0 ET car.flag == nbFlag -1) alors
+		car.laps++
+		car.flag <- 0
+	sinon si (flag.nb - car.flag == 1) alors
+		car.flag++
 	finSi
-	retourner Car.laps
+	retourner car.laps
 finFonction
-
