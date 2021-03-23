@@ -12,5 +12,4 @@ fonction Bonus generateNitro(-> Position[] spawnNitro, -> Bonus[] nitroList)
 		finPour
 	tantQue (present)
 	retourner nitro
-finAction
-
+finFonction
