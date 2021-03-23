@@ -3,11 +3,9 @@ faire
 		startTour()
 		doStartTour <- faux
 	finSi
- 	
 	//On inserera ici le resultat des actions des joueurs
-
-	doGravityOnAll(p1.blocks)
 	
+	doGravityOnAll(p1.blocks)
 	si (!continueFall (p1.blocks, p1.bf1))
 		blockDown(p1)
 		doGravityOnAll(p1.blocks)
@@ -16,7 +14,7 @@ faire
 			nbCombinations <- destroyBlock(p1.blocks)
 			doGravityOnAll(p1.blocks)
 			si (nbCombinations !=0) alors
-				penaltyReps2 <- penaltyReps2 + puissance(2, nbCombinations)
+				penaltyReps2 += puissance(2, nbCombinations)
 			finSi
 		tantQue (nbCombinations != 0) 
 		si (penaltyReps1 > 0) alors
