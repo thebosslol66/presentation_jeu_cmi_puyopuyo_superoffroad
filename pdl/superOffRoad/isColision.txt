@@ -3,8 +3,8 @@ fonction booleen isCollision(-> Position[] verticle1, -> Position [] verticle)
 	listAxis <- getAxisList(verticle1)
 	booleen collision
 	entier count
-	Pour i de 0 a longueur(listAxis) pas de 1 faire
-		Si (isCollisionAxis(listAxis[i], verticle1, verticle2)) ALORS
+	pour i de 0 a longueur(listAxis) pas de 1 faire
+		si (isCollisionAxis(listAxis[i], verticle1, verticle2)) alors
 			count++
 		finSi
 	finPour
