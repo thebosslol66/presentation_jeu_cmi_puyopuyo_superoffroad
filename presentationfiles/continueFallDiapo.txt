@@ -1,6 +1,6 @@
 booleen fonction continueFall (entier[][] blocks, BlockFall bf)
 	booleen test 
-	dansLeCasDe ()
+	dansLeCasDe (bf.orient)
 		cas 0 : 
 			test <- blockTest(blocks, bf.posMat.x, bf.posMat.y + 1) OU blockTest(blocks, bf.posMat.x - 1, bf.posMat.y + 1) OU (bf.posMat.y < HEIGHTMAT -1)
 //Pour la valeur test le cas 0 et 2 sont semblables
